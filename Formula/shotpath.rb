@@ -1,7 +1,7 @@
 class Shotpath < Formula
   desc "Watch your macOS Desktop for screenshots and copy the path to clipboard"
   homepage "https://github.com/hboon/shotpath"
-  url "https://github.com/hboon/shotpath.git", tag: "v0.1.0"
+  url "https://github.com/hboon/shotpath.git", tag: "v0.2.0"
   head "https://github.com/hboon/shotpath.git", branch: "main"
   license "MIT"
 
@@ -14,10 +14,10 @@ class Shotpath < Formula
   end
 
   service do
-    run [opt_bin/"shotpath"]
+    run [opt_bin / "shotpath"]
     keep_alive true
-    log_path var/"log/shotpath.log"
-    error_log_path var/"log/shotpath.log"
+    log_path var / "log/shotpath.log"
+    error_log_path var / "log/shotpath.log"
   end
 
   test do
